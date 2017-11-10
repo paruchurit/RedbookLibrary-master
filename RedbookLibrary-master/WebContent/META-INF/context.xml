@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+	<!--$ANALYSIS-IGNORE, QUICKFIX APPLIED -->
+	<Environment
+		description="valid values are: true or false. This controls whether the test information is displayed on the main page"
+		name="inTesting" override="false" type="java.lang.String" value="true" />
+
+	<!--$ANALYSIS-IGNORE, QUICKFIX APPLIED -->
+	<Parameter name="notifyOnGet" value="true" />
+
+	<!--$ANALYSIS-IGNORE, QUICKFIX APPLIED -->
+	<Resource auth="Container" 
+		driverClassName="org.apache.derby.jdbc.EmbeddedDriver" 
+		maxIdle="30" name="jdbc/redbooklib-SQLDB" password=""
+		type="javax.sql.DataSource" url="jdbc:derby:library;create=true"
+		username="" />
+
+	<!--$ANALYSIS-IGNORE -->
+	<Valve className="org.apache.catalina.valves.AccessLogValve"
+		directory="/temp/TomcatLogs" pattern="common" prefix="localhost_access_log."
+		suffix=".txt" />
+</Context>

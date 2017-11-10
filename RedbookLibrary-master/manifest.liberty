@@ -1,0 +1,8 @@
+applications:
+- name: redbooklibrary
+  memory: 512M
+  path: RedbookLibrary.war
+  host: redbook-library
+  buildpack: liberty-for-java 
+  services:
+  - redbooklib-SQLDB
